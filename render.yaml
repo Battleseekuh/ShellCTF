@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ctfd
+    env: docker
+    repo: https://github.com/Battleseekuh/ShellCTF
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///ctfd.db
+      - key: UPLOAD_PROVIDER
+        value: filesystem
+      - key: SECRET_KEY
+        generateValue: true
